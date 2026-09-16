@@ -1,0 +1,30 @@
+---
+- name: Configure RHEL servers
+  hosts:
+    - webservers
+    - nfs
+    - db
+
+  become: yes
+
+  tasks:
+
+    - name: Install wireshark
+      yum:
+        name: wireshark
+        state: latest
+
+
+- name: Configure Ubuntu Load Balancer
+  hosts:
+    - lb
+
+  become: yes
+
+  tasks:
+
+    - name: Install wireshark
+      apt:
+        name: wireshark
+        state: latest
+        update_cache: yes
