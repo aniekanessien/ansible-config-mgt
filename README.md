@@ -53,3 +53,7 @@ Ansible connectivity was verified using:
 
 ```bash
 ansible all -i inventory/dev.yml -m ping
+
+## CI/CD Validation
+
+GitHub webhook integration with Jenkins successfully configured and tested.
